@@ -9,7 +9,7 @@ async function bootstrap() {
     {
       transport: Transport.RMQ,
       options: {
-        urls: ['amqp://jaragua-01.lmq.cloudamqp.com:5672'],
+        urls: [process.env.RABBITMQ_URL || 'amqp://jaragua-01.lmq.cloudamqp.com:5672'],
         queue: 'fila.notificacao.entrada.pedro-angelo',
         queueOptions: {
           durable: false,
