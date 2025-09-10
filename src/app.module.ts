@@ -10,7 +10,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         name: 'RMQ_CLIENT',
         transport: Transport.RMQ,
         options: {
-          urls: [process.env.RABBITMQ_URL || 'amqp://jaragua-01.lmq.cloudamqp.com:5672'],
+          urls: [process.env.RABBITMQ_URL || 'amqp://bjnuffmq:gj-YQIiEXyfxQxjsZtiYDKeXIT8ppUq7@jaragua-01.lmq.cloudamqp.com:5672'],
           queue: 'fila.notificacao.entrada.pedro-angelo',
           queueOptions: {
             durable: false,
